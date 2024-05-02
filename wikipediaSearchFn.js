@@ -59,7 +59,7 @@ function wikipediaSearch(event) {
 
         fetch(requestedUrl, options)
         .then(function(response) {
-            return response;
+            return response.json();
         })
         .then(function(jsonData) {
             let {search_results} = jsonData;
